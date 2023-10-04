@@ -19,6 +19,12 @@ code {
     monospace;
 }
 
+.navbar-scrolled a, .navbar-scrolled a b {
+  color: #000;
+  transition: color 0.3s ease; /* Add a smooth transition effect */
+}
+
+
 nav {
   position: fixed;
   top: 0;
@@ -248,27 +254,37 @@ nav ul li {
 .frases {
   display: flex;
   justify-content: space-around;
-  color: #fff;
   margin-top: 25%;
   margin-left: 15px;
   margin-right: 15px;
 }
 
 .frases img {
-  width: 87%;
+  width: 55%;
   margin-top: 25px;
 }
 
 .frases div {
-  width: 18%;
+  margin-left: 4rem;
+  margin-right: 4rem;
   color: #00C4CC;
   font-size: 25px;
+  display: flex;
   font-weight: 300;
 }
 
 .frases div p {
-  margin-bottom: 65px;
+  margin-top: 65px;
+  font-size: 28px;
+  font-weight: 500;
+  width: 100%;
 }
+
+/* form */
+#zonaForm {
+  height: 100vh;
+}
+
 
 /* contatos */
 .zonaContactos {

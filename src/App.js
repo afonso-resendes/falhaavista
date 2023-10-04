@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./index.css";
 import iphone from "./iphone.png"
 import amarelo from "./amarelo.jpeg"
@@ -9,12 +9,32 @@ import longe from "./longe.jpeg"
 import malha from "./malha.jpeg"
 import nova from "./nova.jpeg"
 
+
+
+
 const App = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 97 * window.innerHeight / 100 && window.scrollY <= 277 * window.innerHeight / 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <body>
 
     {/* barra de cima */}
-    <nav>
+    <nav className={scrolled ? "navbar-scrolled" : ""}>
       <a href="./">
         {/* <img src="src/assets/step logo.png" /> */}
         <b>FALHA À VISTA</b>
@@ -84,38 +104,92 @@ const App = () => {
       </header>
       <div class="frases" id="frases">
         <div>
-          <blockquote>
-          <p>Fendas paralelas ao eixo da estrada</p>
-          </blockquote>
-
-          <b>Longitudinal</b>
+          <div style={{display: "block", width: "100%"}}>
+          <b style={{color: "#000", fontSize: 32, fontWeight: "500"}}>Longitudinal</b>
           <br></br>
-
-          <img src={longe} />
-        </div>
-        <div>
-          <p>Este tipo é particularmente importante pois pode indiciar a ocorrência de um escorregamento no aterro, seja numa estrada, ou numa barragem de aterro.</p>
-          <b>Curva</b>
+          <p>Zona de passagem dos rodados dos veículos e por vezes junto ao eixo.
           <br></br>
-          <img src={curva} />
-
-        </div>
-        <div>
-          <p>Conjunto de fendas formando entre si uma malha</p>
-          <b>Malha</b>
           <br></br>
-          <img src={malha} />
-
+          Classificação:
+          <br></br>
+          Nível 1: Fenda isolada e fechada (largura da fenda inferior a 2 mm).
+          <br></br>
+          Nível 2: Fenda aberta (abertura da fenda entre 2 a 4mm).
+          <br></br>
+          Nível 3: Fenda grave ramificada, com perda de material e 
+          acompanhada de deformações e desagregações.</p>
+          </div>
+          <div style={{display: "block", marginTop: -120, marginLeft: 75}}>
+          <img style={{marginLeft: 155}} src={longe} />
+          <img style={{marginLeft: 55}} src={curva} />
+          </div>
         </div>
-        <div>
-          <p>É uma evolução do fendilhamento de malha</p>
-          <b>Crocodilo</b>
-          
-          <img src={croc} />
-
-        </div>
+    
       </div>
     </div>
+    <div class="zonaTipos" id="tipos">
+      <div class="frases" id="frases">
+        <div style={{marginTop: -160}}>
+          <div style={{display: "block", width: "100%"}}>
+          <b style={{color: "#000", fontSize: 32, fontWeight: "500"}}>Curva</b>
+          <br></br>
+          <p>Este tipo é particularmente importante pois pode indiciar a ocorrência de um escorregamento no aterro, seja numa estrada, ou numa barragem de aterro. 
+          <br></br>
+          <br></br>
+          Classificação:
+          <br></br>
+          Nível 1: Fenda isolada e fechada (largura da fenda inferior a 2 mm).
+          <br></br>
+          Nível 2: Fenda aberta (abertura da fenda entre 2 a 4mm).
+          <br></br>
+          Nível 3: Fenda grave ramificada, com perda de material e 
+          acompanhada de deformações e desagregações.
+          </p>
+ 
+          </div>
+          <div style={{display: "block", width: "80%", marginTop: 80, marginLeft: 75}}>
+          <img style={{marginLeft: 155}} src={curva} />
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <div class="zonaTipos" id="tipos">
+      <div class="frases" id="frases">
+        <div style={{marginTop: -250}}>
+          <div style={{display: "block", width: "100%"}}>
+          <b style={{color: "#000", fontSize: 32, fontWeight: "500"}}>Malha</b>
+          <p>Fendas que formam entre si uma malha de dimensão variável, localizadas inicialmente na zona de passagem dos rodados dos veículos abrangendo progressivamente toda a largura da via de tráfego.
+          </p>
+          <br></br>
+          <br></br>
+          <b style={{color: "#000", fontSize: 32, fontWeight: "500"}}>Crocodilo</b>
+        <p style={{fontSize: 25, width: "120%"}}>  
+É uma evolução do fendilhamento de malha.
+<br></br>
+Classificação:
+<br></br>
+Nível 1: Malha com fendilhamento de abertura de pequena dimensão e sem ascensão de finos (abertura menos de 2mm e malha mais de 20cm).
+  <br></br>
+Nível 2: Malha com fendilhamento de abertura de todas as dimensões e com perda de material (fendas com abertura menor que 2mm e malha maior que 20cm, ou fendas com abertura entre 2 e 4mm para qualquer tipo de malha, ou fendas com abertura maior qu 4mm e malha maior que 40cm).
+Nível 3: Malha com fendilhamento de abertura de grande dimensão com perda de material, ascensão de finos acompanhada de deformações, ninhos e peladas (fendas
+com abertura maior que 4mm e malha menor que 40cm).
+          </p>
+ 
+          </div>
+          
+          <div style={{display: "block", width: "80%", marginTop: 0, marginLeft: 75}}>
+          <img style={{marginLeft: 255}} src={malha} />
+          <img style={{marginLeft: 155}} src={croc} />
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <div id="zonaForm">
+      
+    </div>
+   
 
     {/* quarta pagina */}
 
@@ -132,8 +206,12 @@ const App = () => {
         </div>
       </header>
     </div>
+    <script>
+      
+    </script>
 
     </body>
+    
   );
 };
 

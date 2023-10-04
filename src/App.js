@@ -4,6 +4,13 @@ import { addDoc, collection } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import styles from "./index.css";
 import iphone from "./iphone.png"
+import amarelo from "./amarelo.jpeg"
+import croc from "./croc.jpeg"
+import curva from "./curva.jpeg"
+import lab from "./lab.jpeg"
+import longe from "./longe.jpeg"
+import malha from "./malha.jpeg"
+import nova from "./nova.jpeg"
 
 const App = () => {
   // Estados para armazenar email, imagem e erros relacionados
@@ -67,6 +74,8 @@ const App = () => {
 
   return (
     <body>
+
+    {/* barra de cima */}
     <nav>
       <a href="./">
         {/* <img src="src/assets/step logo.png" /> */}
@@ -74,15 +83,17 @@ const App = () => {
       </a>
       <div>
       <ul>
-        <li>Sobre nós</li>
-        <li>Carregar foto de fenda</li>
-        <li>Tipos de fendas</li>
-        <li>Galeria de fendas</li>
-        <li>Contactos</li>
+        <li><a href="#sobreNosZona">Sobre nós</a></li>
+        <li><a href="#carregaZona">Carregar foto de fenda</a></li>
+        <li><a href="#tipos">Tipos de fendas</a></li>
+        <li><a href="#frases">Galeria de fendas</a></li>
+        <li><a href="#contactos">Contactos</a></li>
       </ul>
       
       </div>
     </nav>
+
+    {/* primeira pagina */}
     <div class="zonaInicial">
       <div>
         <h1>Viu alguma fenda num pavimento?</h1>
@@ -92,14 +103,20 @@ const App = () => {
         <img src={iphone} />
       </div>
     </div>
-    <div class="sobreNosZona">
+    <div class="sobreNosZona" id="sobreNosZona">
       <header>
         <h1>Sobre Nós</h1>
         <p>Este projeto foi desenvolvido do ambito da Tese de Mestrado do curso de Eng. Informática da FCT-NOVA da aluna Raquel Pena em colaboração  com o LNEC entre, e tem como objectivo tornar a deteção de falhas em pavimentos rodoviários mais prática, fácil, automática e acessível a todos por uma foto. Junte se a nós neste projecto e comece ja a enviar-nos fotos das falhas que deteta no seu dia a dia. </p>
       </header>
+      <div class="imgsSobreNos">
+        <img id="imgNova" src={nova} />
+        <img id="imgLab" src={lab} />
+        <img id="imgAmarelo" src={amarelo} />
+      </div>
     </div>
-    
-    <div class="carregaZona">
+
+    {/* segunda pagina */}
+    <div class="carregaZona" id="carregaZona">
       <header>
         <h1>Carregar Foto de fendas</h1>
       </header>
@@ -118,6 +135,9 @@ const App = () => {
         </button>
       </div>
     </div>
+
+    {/* form */}
+
     <form onSubmit={handleSubmit}>
       <div>
         <label>Email:</label>
@@ -136,33 +156,51 @@ const App = () => {
       </div>
       <button type="submit">Submeter</button>
     </form>
-    <div class="zonaTipos">
+
+    {/* terceira pagina */}
+
+    <div class="zonaTipos" id="tipos">
       <header>
         <h1>Tipos de fendas</h1>
       </header>
-      <div class="frases">
+      <div class="frases" id="frases">
         <div>
           <blockquote>
           <p>Fendas paralelas ao eixo da estrada</p>
           </blockquote>
 
           <b>Longitudinal</b>
+          <br></br>
+
+          <img src={longe} />
         </div>
         <div>
           <p>Este tipo é particularmente importante pois pode indiciar a ocorrência de um escorregamento no aterro, seja numa estrada, ou numa barragem de aterro.</p>
           <b>Curva</b>
+          <br></br>
+          <img src={curva} />
+
         </div>
         <div>
           <p>Conjunto de fendas formando entre si uma malha</p>
           <b>Malha</b>
+          <br></br>
+          <img src={malha} />
+
         </div>
         <div>
           <p>É uma evolução do fendilhamento de malha</p>
           <b>Crocodilo</b>
+          
+          <img src={croc} />
+
         </div>
       </div>
     </div>
-    <div class="zonaContactos">
+
+    {/* quarta pagina */}
+
+    <div class="zonaContactos" id="contactos">
       <header>
         <div class="titulo"><h1>Contactos</h1></div>
         <div class="infoBranca">

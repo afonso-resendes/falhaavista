@@ -6,8 +6,10 @@ import croc from "./croc.jpeg"
 import curva from "./curva.jpeg"
 import lab from "./lab.jpeg"
 import longe from "./longe.jpeg"
+import longe2 from "./longitudinal2.png"
 import malha from "./malha.jpeg"
 import nova from "./nova.jpeg"
+import logo from "./icon.png"
 
 
 
@@ -36,7 +38,7 @@ const App = () => {
     {/* barra de cima */}
     <nav className={scrolled ? "navbar-scrolled" : ""}>
       <a href="./">
-        {/* <img src="src/assets/step logo.png" /> */}
+        <img src={logo} />
         <b>FALHA À VISTA</b>
       </a>
       <div>
@@ -94,6 +96,59 @@ const App = () => {
       </div>
     </div>
 
+
+    <div id="zonaForm">
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div>
+      <form>
+        <div>
+          <label>Formulário de registo de fenda</label>
+          <br></br>
+          <textarea></textarea>
+          <br></br>
+          <div style={{display: "flex", justifyContent: "space-between"}}>
+          <input
+            placeholder="Tipo de fenda"
+            // value={email}
+            // onChange={handleEmailChange}
+          />
+          <br></br>
+          <input
+            placeholder="Nome"
+            // value={email}
+            // onChange={handleEmailChange}
+          />
+          <br></br>
+          <input
+            placeholder="Email"
+            type="email"
+            // value={email}
+            // onChange={handleEmailChange}
+          />
+          {/* {emailError && <div>{emailError}</div>} */}
+          </div>
+        </div>
+        <br></br>
+        <div>
+          <p style={{fontFamily: "Avenir Next", fontWeight: "500", fontSize: 18}}>Upload da imagem</p>
+          <input type="file" accept="image/*" />
+          {/* <input type="file" accept="image/*" onChange={handleImageChange} /> */}
+          {/* {photoError && <div>{photoError}</div>} */}
+        </div>
+        <button type="submit">Submeter</button>
+      </form>
+      </div>
+    </div>
+
     
 
     {/* terceira pagina */}
@@ -121,7 +176,7 @@ const App = () => {
           </div>
           <div style={{display: "block", marginTop: -120, marginLeft: 75}}>
           <img style={{marginLeft: 155}} src={longe} />
-          <img style={{marginLeft: 55}} src={curva} />
+          <img style={{marginLeft: 55}} src={longe2} />
           </div>
         </div>
     
@@ -186,9 +241,7 @@ com abertura maior que 4mm e malha menor que 40cm).
     
       </div>
     </div>
-    <div id="zonaForm">
-      
-    </div>
+    
    
 
     {/* quarta pagina */}

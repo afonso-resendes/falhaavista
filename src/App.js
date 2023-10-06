@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./index.css";
 import iphone from "./iphone.png";
 import amarelo from "./amarelo.jpeg";
-import croc from "./croc.jpeg";
+import croc from "./croc2.png";
 import curva from "./curva.jpeg";
 import lab from "./lab.jpeg";
 import longe from "./longe.jpeg";
@@ -183,7 +183,11 @@ const App = () => {
         <div class="imgsSobreNos">
           <img id="imgNova" src={nova} />
           <img id="imgLab" src={lab} />
+          <div>
           <img id="imgAmarelo" src={amarelo} />
+          <p style={{fontSize: 12, marginRight: 250, marginBottom: 10, fontFamily: "Avenir Next"}}>https://www.sindetransrp.com/noticias/conheca-os-13-principais-defeitos-do-pavimento-das/, 
+acedido a 4 Outubro, 2023</p>
+          </div>
         </div>
       </div>
 
@@ -225,7 +229,7 @@ const App = () => {
               <label>Formulário de registo de fenda</label>
               <br></br>
               <textarea value={body} onChange={handleBodyChange}></textarea>
-              {bodyError && <div>{bodyError}</div>}
+              {bodyError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{bodyError}</div>}
               <br></br>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <header>
@@ -333,7 +337,7 @@ const App = () => {
                 Longitudinal
               </b>
               <br></br>
-              <p>
+              <p style={{marginTop: 22, fontSize: 25}}>
                 Zona de passagem dos rodados dos veículos e por vezes junto ao
                 eixo.
                 <br></br>
@@ -350,8 +354,17 @@ const App = () => {
               </p>
             </div>
             <div style={{ display: "block", marginTop: -120, marginLeft: 75 }}>
-              <img style={{ marginLeft: 155 }} src={longe} />
+              <div>
+                <img style={{ marginLeft: 155 }} src={longe} />
+                <p style={{fontSize: 12, marginRight: 0, marginLeft: 15, marginBottom: 10, color: "#fff", fontFamily: "Avenir Next"}}>Manual de Pavimentos, CEPSA Betumes, 2006 </p>
+              </div>
+              <div>
               <img style={{ marginLeft: 55 }} src={longe2} />
+              <p style={{fontSize: 12, marginRight: 0, marginLeft: 15, marginBottom: 10, color: "#fff", fontFamily: "Avenir Next"}}>Catálogo de Degradações dos Pavimentos Rodoviários 
+Volume 2: Gestão da Conservação, EP – Estradas de Portugal, S.A., Março de 2008.
+  </p>
+
+              </div>
             </div>
           </div>
         </div>
@@ -364,7 +377,7 @@ const App = () => {
                 Curva
               </b>
               <br></br>
-              <p>
+              <p style={{marginTop: 15, fontSize: 25}}>
                 Este tipo é particularmente importante pois pode indiciar a
                 ocorrência de um escorregamento no aterro, seja numa estrada, ou
                 numa barragem de aterro.
@@ -389,7 +402,10 @@ const App = () => {
                 marginLeft: 75,
               }}
             >
+              <div>
               <img style={{ marginLeft: 155 }} src={curva} />
+              <p style={{fontSize: 12, marginRight: 0, marginLeft: 15, marginBottom: 10, color: "#fff", fontFamily: "Avenir Next"}}>Manual de Pavimentos, CEPSA Betumes, 2006 </p>
+</div>
             </div>
           </div>
         </div>
@@ -401,7 +417,7 @@ const App = () => {
               <b style={{ color: "#000", fontSize: 32, fontWeight: "500" }}>
                 Malha
               </b>
-              <p>
+              <p style={{ fontSize: 22, marginTop: 16, width: "120%" }}>
                 Fendas que formam entre si uma malha de dimensão variável,
                 localizadas inicialmente na zona de passagem dos rodados dos
                 veículos abrangendo progressivamente toda a largura da via de
@@ -412,7 +428,7 @@ const App = () => {
               <b style={{ color: "#000", fontSize: 32, fontWeight: "500" }}>
                 Crocodilo
               </b>
-              <p style={{ fontSize: 25, width: "120%" }}>
+              <p style={{ fontSize: 19, marginTop: 16, width: "120%" }}>
                 É uma evolução do fendilhamento de malha.
                 <br></br>
                 Classificação:
@@ -440,8 +456,14 @@ const App = () => {
                 marginLeft: 75,
               }}
             >
+              <div>
               <img style={{ marginLeft: 255 }} src={malha} />
-              <img style={{ marginLeft: 155 }} src={croc} />
+              <p style={{fontSize: 12, marginRight: 0, marginLeft: 15, marginBottom: 10, color: "#fff", fontFamily: "Avenir Next"}}>Manual de Pavimentos, CEPSA Betumes, 2006 </p>
+              </div>
+              <div>
+              <img style={{ marginLeft: 155, marginTop: 50 }} src={croc} />
+              <p style={{fontSize: 12, marginRight: 0, marginLeft: 15, marginBottom: 10, color: "#fff", fontFamily: "Avenir Next"}}>Manual de Pavimentos, CEPSA Betumes, 2006 </p>
+              </div>
             </div>
           </div>
         </div>

@@ -115,7 +115,7 @@ const App = () => {
     const handleScroll = () => {
       if (
         window.scrollY >= (97 * window.innerHeight) / 100 &&
-        window.scrollY <= (277 * window.innerHeight) / 100
+        window.scrollY <= (377 * window.innerHeight) / 100
       ) {
         setScrolled(true);
       } else {
@@ -274,6 +274,7 @@ const App = () => {
               />
               {photoError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{photoError}</div>}
             </div>
+            <br></br>
             <button type="submit">Submeter</button>
           </form>
         </div>
@@ -413,13 +414,13 @@ const App = () => {
           <div class="titulo">
             <h1>Contactos</h1>
           </div>
-          <div class="infoBranca">
+          {/* <div class="infoBranca">
             <b>Phone</b>
             <p>(351) 914867769 </p>
-          </div>
+          </div> */}
           <div class="infoBranca">
             <b>Email</b>
-            <p>r.pena@campus.fct.unl.ot</p>
+            <p>falhaavista@gmail.com</p>
           </div>
         </header>
       </div>

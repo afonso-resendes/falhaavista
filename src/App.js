@@ -229,29 +229,59 @@ const App = () => {
               <br></br>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <header>
-                <input
-                  placeholder="Tipo de fenda"
-                  value={type}
-                  onChange={handleTypeChange}
-                />
-                {typeError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{typeError}</div>}
+                  <input
+                    placeholder="Tipo de fenda"
+                    value={type}
+                    onChange={handleTypeChange}
+                  />
+                  {typeError && (
+                    <div
+                      style={{
+                        color: "#f00",
+                        fontSize: 13,
+                        fontFamily: "Avenir Next",
+                      }}
+                    >
+                      {typeError}
+                    </div>
+                  )}
                 </header>
                 <header>
-                <input
-                  placeholder="Nome"
-                  value={name}
-                  onChange={handleNameChange}
-                />
-                {nameError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{nameError}</div>}
+                  <input
+                    placeholder="Nome"
+                    value={name}
+                    onChange={handleNameChange}
+                  />
+                  {nameError && (
+                    <div
+                      style={{
+                        color: "#f00",
+                        fontSize: 13,
+                        fontFamily: "Avenir Next",
+                      }}
+                    >
+                      {nameError}
+                    </div>
+                  )}
                 </header>
                 <header>
-                <input
-                  placeholder="Email"
-                  type="email"
-                  value={email}
-                  onChange={handleEmailChange}
-                />
-                {emailError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{emailError}</div>}
+                  <input
+                    placeholder="Email"
+                    type="email"
+                    value={email}
+                    onChange={handleEmailChange}
+                  />
+                  {emailError && (
+                    <div
+                      style={{
+                        color: "#f00",
+                        fontSize: 13,
+                        fontFamily: "Avenir Next",
+                      }}
+                    >
+                      {emailError}
+                    </div>
+                  )}
                 </header>
               </div>
             </div>
@@ -272,7 +302,17 @@ const App = () => {
                 accept="image/*"
                 onChange={handleImageChange}
               />
-              {photoError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{photoError}</div>}
+              {photoError && (
+                <div
+                  style={{
+                    color: "#f00",
+                    fontSize: 13,
+                    fontFamily: "Avenir Next",
+                  }}
+                >
+                  {photoError}
+                </div>
+              )}
             </div>
             <br></br>
             <button type="submit">Submeter</button>

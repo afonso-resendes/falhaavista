@@ -228,27 +228,31 @@ const App = () => {
               {bodyError && <div>{bodyError}</div>}
               <br></br>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <header>
                 <input
                   placeholder="Tipo de fenda"
                   value={type}
                   onChange={handleTypeChange}
                 />
-                {typeError && <div>{typeError}</div>}
-                <br></br>
+                {typeError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{typeError}</div>}
+                </header>
+                <header>
                 <input
                   placeholder="Nome"
                   value={name}
                   onChange={handleNameChange}
                 />
-                {nameError && <div>{nameError}</div>}
-                <br></br>
+                {nameError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{nameError}</div>}
+                </header>
+                <header>
                 <input
                   placeholder="Email"
                   type="email"
                   value={email}
                   onChange={handleEmailChange}
                 />
-                {emailError && <div>{emailError}</div>}
+                {emailError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{emailError}</div>}
+                </header>
               </div>
             </div>
             <br></br>
@@ -268,7 +272,7 @@ const App = () => {
                 accept="image/*"
                 onChange={handleImageChange}
               />
-              {photoError && <div>{photoError}</div>}
+              {photoError && <div style={{color: "#f00", fontSize: 13, fontFamily: "Avenir Next"}}>{photoError}</div>}
             </div>
             <button type="submit">Submeter</button>
           </form>

@@ -299,7 +299,7 @@ textarea {
   font-family: "Avenir Next";
 }
 
-form input {
+form header {
   background-color: #fff;
   width: 30%;
   border-bottom: 1px solid #00C4CC;

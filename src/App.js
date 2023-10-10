@@ -10,6 +10,7 @@ import longe2 from "./longitudinal2.png";
 import malha from "./malha.jpeg";
 import nova from "./nova.jpeg";
 import logo from "./icon.png";
+import camera from "./camera.png";
 
 import { db, storage } from "./firebase";
 import { addDoc, collection } from "firebase/firestore";
@@ -193,8 +194,10 @@ acedido a 4 Outubro, 2023</p>
 
       {/* segunda pagina */}
       <div class="carregaZona" id="carregaZona">
-        <header>
+        <button style={{marginLeft: "60%", marginTop: 200}} class="btnIntro"><a href="#zonaForm" style={{color: "#000", textDecoration: "none"}}>Partilhe Connosco!</a></button>
+        <header style={{marginTop: -215, display: "flex"}}>
           <h1>Carregar Foto de fendas</h1>
+          <img style={{width: 100, height: 100, marginTop: 150}} src={camera} />
         </header>
         <div>
           <button id="b1">

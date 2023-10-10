@@ -15,8 +15,9 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
 }
 
 .navbar-scrolled a, .navbar-scrolled a b {
@@ -103,7 +104,9 @@ nav ul li {
   margin-bottom: 30px;
   color: #fff;
   font-weight: 400;
-  font-family: "Avenir Next";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   font-size: 550%;
 }
 
@@ -119,7 +122,9 @@ nav ul li {
   border-radius: 100px;
   color: #000;
   font-weight: 400;
-  font-family: "Avenir Next";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   width: 420px;
   font-size: 25px;
   margin-left: 8rem;
@@ -245,7 +250,9 @@ nav ul li {
   font-weight: 400;
   color: #fff;
   margin-top: 150px;
-  font-family: "Avenir Next";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   width: 100%;
   text-align: center;
   position: absolute;
@@ -296,7 +303,9 @@ textarea {
   padding-right: 1%;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-family: "Avenir Next";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
 }
 
 form header {
@@ -310,13 +319,17 @@ form header {
 
 form label {
   font-size: 37px;
-  font-family: "Avenir Next";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
 }
 
 form button {
   width: 100%;
   padding: 10px;
-  font-family: "Avenir Next";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   background-color: #00C4CC;
   color: #fff;
   border-radius: 5px;
